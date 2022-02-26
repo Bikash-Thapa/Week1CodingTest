@@ -20,8 +20,10 @@ for i in range(length):
 email_count = []
 for j in range (length):
     count = 1
-    for k in range (j+1, length):
-        if emails_list[j] == emails_list[k]:
+    for k in range (length):
+        if j == k:
+            continue
+        elif emails_list[j] == emails_list[k]:
             count += 1
     email_count.insert(j, count)
 
